@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>搜索页面</title>
+<!-- Custom Theme files -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<!-- Custom Theme files -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="keywords" content="搜索页面" />
+<!--Google Fonts-->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+<!--Google Fonts-->
+<style>
+    body {
+        background-image: url('https://file.imgcc.cloud/images/2024/08/11/d0c3accc422f0f074ff539a70d035253.jpg');
+    }
+</style>
+</head>
+<body>
+<!--search start here-->
+<div class="search">
+    <i> </i>
+    <div class="s-bar">
+        <form id="searchForm">
+            <input type="text" id="searchInput" value="在这里写下你搜索的内容~" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '在这里写下你搜索的内容~';}">
+            <input type="submit" value="搜索"/>
+        </form>
+    </div>
+    <p>你好成章 ：<a href="#"></a>这里可以搜索 <a href="#"> 你的证书/我们的活动 </a></p>
+</div>
+<!--search end here-->    
+<div class="copyright">
+     <p>请精准的写下我们给你提供的密钥！ <a href="" target="_blank">  你好成章</a></p>
+</div>
+
+<script>
+document.getElementById('searchForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    var searchValue = document.getElementById('searchInput').value;
+    var redirects = {
+        '你好成章': 'https://czxsz.github.io/',
+        '全景': 'https://vr.3d66.com/vr/index_detail_5073902.asp',
+        '0x23456789': 'https://file.imgcc.cloud/images/2024/08/10/434ea9f21bf433e6dbeae063a7388485.jpg',
+        '0x98765432': 'http://baidu.com'
+    };
+    if (redirects[searchValue]) {
+        window.location.href = redirects[searchValue];
+    } else {
+        alert('请输入正确的密钥！');
+    }
+});
+</script>
+
+</body>
+</html>
